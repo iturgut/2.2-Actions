@@ -47,4 +47,4 @@ jobs:
           MY_OUTPUT: ${{needs.make_string.outputs.my_output}}
           NUM: ${{matrix.nums}}
         run:
-	  echo "$MY_OUTPUT" - "$NUM"
+	  echo "$MY_OUTPUT - $NUM"
