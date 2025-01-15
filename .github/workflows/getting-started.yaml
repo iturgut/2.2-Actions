@@ -38,4 +38,4 @@ jobs:
     steps:
       - env:
           MY_OUTPUT: ${{needs.make_string.outputs.my_output}}
-        run: echo My output is: "$MY_OUTPUT"
+        run: echo "$MY_OUTPUT"
