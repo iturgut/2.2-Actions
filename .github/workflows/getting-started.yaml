@@ -19,7 +19,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Run a one-line script
-        run: echo MY_WORKFLOW_SECRET
+        run: echo ${{MY_WORKFLOW_SECRET}}
   make_string:
     runs-on: ubuntu-latest
     
@@ -38,4 +38,4 @@ jobs:
     steps:
       - env:
           MY_OUTPUT: ${{needs.make_string.outputs.my_output}}
-        run: echo "$MY_OUTPUT"
+        run: echo "My output is: $MY_OUTPUT"
