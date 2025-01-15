@@ -21,7 +21,7 @@ jobs:
       - name: Run a one-line script
         env:
           env_secret: ${{secrets.MY_WORKFLOW_SECRET}}
-        run: echo ${{env_secret}}
+        run: echo "$env_secret"
   make_string:
     runs-on: ubuntu-latest
     
