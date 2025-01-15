@@ -22,6 +22,7 @@ jobs:
         env:
           env_secret: ${{secrets.MY_WORKFLOW_SECRET}}
         run: echo "$env_secret"
+
   make_string:
     runs-on: ubuntu-latest
     
@@ -30,7 +31,7 @@ jobs:
     
     steps:
       - id: my_step
-        run: echo "my_string = Hello World" >> "$GITHUB_OUTPUT"
+        run: echo "my_string=Hello World" >> "$GITHUB_OUTPUT"
 
   last_job:
     runs-on: ubuntu-latest
