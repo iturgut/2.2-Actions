@@ -9,7 +9,7 @@ runs:
   using: "composite"
   steps:
     - name: Return String
-      run: echo "Returned string: $INPUT"
+      run: echo "$INPUT"
       shell: bash
       env:
         INPUT: ${{ inputs.input_string }}
