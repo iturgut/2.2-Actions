@@ -13,4 +13,8 @@ jobs:
       - id: my_id
       - uses: LangBledsoe/2.2-Actions@852a9e8b8800e14a5fd277f83b2425f53ef2cc1e
         with:
-          input_string: 'This is not the default string'      
+          input_string: 'This is not the default string'
+      - run: echo random-number "$RANDOM_NUMBER"
+        shell: bash
+        env:
+          RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }} 
