@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: my_id
-        uses: LangBledsoe/2.2-Actions@852a9e8b8800e14a5fd277f83b2425f53ef2cc1e
+        uses: LangBledsoe/2.2-Actions@03d976112f7a6a188daa891e849108af8395780c
         with:
           input_string: 'This is not the default string'
       - run: echo random-number "$RANDOM_NUMBER"
