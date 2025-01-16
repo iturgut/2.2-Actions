@@ -1,0 +1,15 @@
+name: 'Composite Action'
+description: 'My composite action exercise code'
+inputs:
+  input_string:
+    description: 'The string the user inputs when using this composite action'
+    required: true
+    default: 'Default input'
+runs:
+  using: "composite"
+  steps:
+    - name: Return String
+      run: echo "Returned string: $INPUT"
+      shell: bash
+      env:
+        INPUT: ${{ inputs.input_string }}

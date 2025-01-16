@@ -1,0 +1,16 @@
+name: Using reusable
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - id: my_id
+      - uses: LangBledsoe/2.2-Actions@852a9e8b8800e14a5fd277f83b2425f53ef2cc1e
+        with:
+          input_string: 'This is not the default string'      
